@@ -150,6 +150,15 @@ require('lualine').setup({
 -- Load nvim-tree
 require("nvim-tree").setup({
     on_attach = customize_nvim_tree_on_attach,
+    view = {
+      adaptive_size = true, -- Adjusts size to fit content
+    },
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+    update_focused_file = {
+      enable = true,
+      update_root = true
+    },
 })
 
 -- Open nvim-tree on startup
