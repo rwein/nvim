@@ -116,7 +116,8 @@ require("lazy").setup({
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
+    'https://gitlab.com/HiPhish/rainbow-delimiters.nvim',
+    "luukvbaal/statuscol.nvim"
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
@@ -167,3 +168,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+-- Configure status column
+require("statuscol").setup({
+    relculright = true,
+})
