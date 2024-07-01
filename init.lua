@@ -104,6 +104,9 @@ require("lazy").setup({
       keys = {
         { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
       }
+    },
+    -- Treesitter
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     }
   },
   -- Configure any other settings here. See the documentation for more details.
