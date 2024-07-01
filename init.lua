@@ -112,7 +112,8 @@ require("lazy").setup({
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+    },
+    'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
