@@ -18,6 +18,7 @@ vim.opt.colorcolumn="120"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
+vim.opt.cursorline = true
 
 -- Configure softabs & tabs
 vim.opt.tabstop = 4
