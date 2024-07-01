@@ -34,6 +34,9 @@ vim.opt.clipboard = "unnamedplus"
 -- Enable 24 bit colors
 vim.opt.termguicolors = true
 
+-- Set Font
+vim.o.guifont = "Operator Mono Book:h15" 
+
 -- Map 'jk' to <Esc> in insert mode
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
@@ -120,6 +123,13 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+})
+
+-- Configure Material theme
+require('material').setup({
+    styles = {
+        comments = { italic = true }
+    },
 })
 
 -- Load material theme
