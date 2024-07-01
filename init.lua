@@ -106,6 +106,7 @@ require("lazy").setup({
       }
     },
     -- Treesitter
+    -- https://github.com/nvim-treesitter/nvim-treesitter/issues/3092
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     -- Telescope
     {
