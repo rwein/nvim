@@ -183,3 +183,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 require("statuscol").setup({
     relculright = true,
 })
+
+-- If Neovide is opened up via spotlight and the cwd is root, change it to /code
+if vim.g.neovide then
+    if vim.fn.getcwd() == '/' then
+        vim.cmd('cd ~/code')
+    end
+end
