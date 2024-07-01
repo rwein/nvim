@@ -118,7 +118,8 @@ require("lazy").setup({
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     'https://gitlab.com/HiPhish/rainbow-delimiters.nvim',
-    "luukvbaal/statuscol.nvim"
+    "luukvbaal/statuscol.nvim",
+    "nanotee/zoxide.vim"
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
