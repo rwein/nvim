@@ -51,3 +51,6 @@ end
 
 -- Load up lazy.nvim
 require("config.lazy")
+
+-- Configure LSPs
+require("config.lsp")
