@@ -1,0 +1,14 @@
+return {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+        require('lualine').setup({
+            options = {
+                disabled_filetypes = {
+                    -- Don't show on nvim-tree
+                    'NvimTree'
+                }
+            }
+        })
+    end
+}
