@@ -1,3 +1,4 @@
+-- Change the mapleader to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 

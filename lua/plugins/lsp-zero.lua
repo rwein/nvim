@@ -1,3 +1,5 @@
+-- Simplified LSP setup
+-- https://github.com/VonHeikemen/lsp-zero.nvim
 return {
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},

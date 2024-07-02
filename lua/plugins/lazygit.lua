@@ -1,3 +1,5 @@
+-- Provides access to lazygit within vim
+-- https://github.com/jesseduffield/lazygit
 return {
     "kdheepak/lazygit.nvim",
     cmd = {

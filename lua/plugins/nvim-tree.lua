@@ -1,3 +1,6 @@
+-- Tree File Explorer
+-- https://github.com/nvim-tree/nvim-tree.lua:w
+
 -- Customize nvim-tree key bindings
 local function customize_nvim_tree_on_attach(bufnr)
   local api = require "nvim-tree.api"
