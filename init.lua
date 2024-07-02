@@ -31,7 +31,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 
 -- Set Font for Neovide
-vim.o.guifont = "Operator Mono Book:h15" 
+vim.o.guifont = "Operator Mono Book:h15"
 
 -- Map 'jk' to <Esc> in insert mode
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
