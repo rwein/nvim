@@ -46,6 +46,15 @@ return {
 
         -- Open nvim tree with C-e
         vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+        -- Allow opening Telescope from within nvim tree so we don't need to switch back to the file buffer to use.
+        -- There's probably a better way of doing this without copying these over from nvim-telescope.lua but for now,
+        -- this is okay with me.
+        local builtin = require('telescope.builtin')
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+        vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+        vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
     end
 }
 
