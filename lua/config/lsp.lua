@@ -15,3 +15,17 @@ end)
 -- lspconfig.phpactor.setup({})
 lspconfig.intelephense.setup({}) -- Closed source and some features pay walled but works well for php
 lspconfig.lua_ls.setup({})
+
+cmp.setup({
+    -- Preselect first autocompletion
+    preselect = 'item',
+    completion = {
+      completeopt = 'menu,menuone,noinsert'
+    },
+    mapping = cmp.mapping.preset.insert({
+      -- Allow tabbing through completions
+      ['<Tab>'] = lsp_zero.cmp_action().luasnip_supertab(),
+      -- Confirm with 'enter' key
+      ['<CR>'] = cmp.mapping.confirm({select = false}),
+    })
+})
