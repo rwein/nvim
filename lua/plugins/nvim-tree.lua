@@ -56,6 +56,7 @@ return {
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
         vim.keymap.set('n', '<leader>fs', require('session-lens').search_session, {})
+        vim.keymap.set('n', '<leader>fp', require('telescope').extensions.project.project, {})
     end
 }
 
