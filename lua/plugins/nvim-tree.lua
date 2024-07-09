@@ -40,6 +40,8 @@ return {
                 -- Only open nvim-tree if no files were specified on command line
                 if #vim.fn.argv() == 0 then
                     require("nvim-tree.api").tree.open()
+                    -- https://github.com/romgrk/barbar.nvim/issues/421#issuecomment-1502473406
+                    vim.api.nvim_exec_autocmds("BufWinEnter", { buffer = vim.fn.bufnr("#") })
                 end
             end,
         })
