@@ -2,5 +2,5 @@
 -- https://gitlab.com/HiPhish/rainbow-delimiters.nvim
 
 return {
-    'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
+    "https://gitlab.com/HiPhish/rainbow-delimiters.nvim",
 }

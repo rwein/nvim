@@ -1,13 +1,13 @@
 -- Set up LSPs & Autocomplete
-local lspconfig = require('lspconfig')
-local cmp = require('cmp')
-local lsp_zero = require('lsp-zero')
+local lspconfig = require("lspconfig")
+local cmp = require("cmp")
+local lsp_zero = require("lsp-zero")
 
 -- Set default keymaps when an LSP attaches to a buffer
 lsp_zero.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp_zero.default_keymaps({buffer = bufnr})
+    -- see :help lsp-zero-keybindings
+    -- to learn the available actions
+    lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
 -- PHPActor is an opensource LSP for PHP, but it didn't work as well as Intelephense for me (as of Jul 2024). Keeping
@@ -18,14 +18,14 @@ lspconfig.lua_ls.setup({})
 
 cmp.setup({
     -- Preselect first autocompletion
-    preselect = 'item',
+    preselect = "item",
     completion = {
-      completeopt = 'menu,menuone,noinsert'
+        completeopt = "menu,menuone,noinsert",
     },
     mapping = cmp.mapping.preset.insert({
-      -- Allow tabbing through completions
-      ['<Tab>'] = lsp_zero.cmp_action().luasnip_supertab(),
-      -- Confirm with 'enter' key
-      ['<CR>'] = cmp.mapping.confirm({select = false}),
-    })
+        -- Allow tabbing through completions
+        ["<Tab>"] = lsp_zero.cmp_action().luasnip_supertab(),
+        -- Confirm with 'enter' key
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    }),
 })

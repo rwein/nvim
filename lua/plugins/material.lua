@@ -1,16 +1,16 @@
 -- Material Theme
 -- https://github.com/marko-cerovac/material.nvim
 return {
-    'marko-cerovac/material.nvim',
+    "marko-cerovac/material.nvim",
     config = function()
         -- Setup Material theme
-        require('material').setup({
+        require("material").setup({
             styles = {
-                comments = { italic = true }
-            }
-    })
+                comments = { italic = true },
+            },
+        })
 
-    -- Load material theme
-    vim.cmd 'colorscheme material'
-  end
+        -- Load material theme
+        vim.cmd("colorscheme material")
+    end,
 }

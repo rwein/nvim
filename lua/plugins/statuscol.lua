@@ -8,5 +8,5 @@ return {
             -- Right align line numbers
             relculright = true,
         })
-    end
+    end,
 }

@@ -9,33 +9,33 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = function ()
-        require'nvim-treesitter.configs'.setup {
-          -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-          ensure_installed = {
-            "lua",
-            "vim",
-            "vimdoc",
-            "query",
-            "markdown",
-            "markdown_inline",
-            "html",
-            "css",
-            "php",
-            "phpdoc",
-            "javascript",
-            "typescript",
-            "tsx",
-            "python",
-            "go",
-            "bash",
-            "json",
-            "ruby",
-            "sql",
-            "xml",
-            "yaml",
-            "dockerfile"
-        }
-      }
-    end
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            -- A list of parser names, or "all" (the listed parsers MUST always be installed)
+            ensure_installed = {
+                "lua",
+                "vim",
+                "vimdoc",
+                "query",
+                "markdown",
+                "markdown_inline",
+                "html",
+                "css",
+                "php",
+                "phpdoc",
+                "javascript",
+                "typescript",
+                "tsx",
+                "python",
+                "go",
+                "bash",
+                "json",
+                "ruby",
+                "sql",
+                "xml",
+                "yaml",
+                "dockerfile",
+            },
+        })
+    end,
 }

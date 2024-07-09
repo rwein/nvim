@@ -2,5 +2,5 @@
 -- https://github.com/nanotee/zoxide.vim
 
 return {
-    "nanotee/zoxide.vim"
+    "nanotee/zoxide.vim",
 }
