@@ -29,11 +29,8 @@ return {
             view = {
                 adaptive_size = true, -- Adjusts size to fit content
             },
-            sync_root_with_cwd = true,
-            respect_buf_cwd = true,
             update_focused_file = {
                 enable = true,
-                update_root = true,
             },
         })
 
@@ -62,7 +59,5 @@ return {
             builtin.buffers({ sort_mru = true, ignore_current_buffer = true })
         end, {})
         vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-        vim.keymap.set("n", "<leader>fs", require("session-lens").search_session, {})
-        vim.keymap.set("n", "<leader>fp", require("telescope").extensions.project.project, {})
     end,
 }
