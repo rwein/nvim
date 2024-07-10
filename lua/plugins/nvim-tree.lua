@@ -15,6 +15,9 @@ local function customize_nvim_tree_on_attach(bufnr)
     -- Override with custom mappings
     -- When we're inside of nvim tree, we still want C-e to toggle
     vim.keymap.set("n", "<C-e>", ":NvimTreeToggle<CR>", opts("Toggle"))
+
+    -- Ensure we can toggle the terminal from nvim tree.
+    vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", opts("Terminal"))
 end
 
 return {
