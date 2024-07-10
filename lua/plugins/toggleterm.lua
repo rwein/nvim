@@ -20,10 +20,15 @@ return {
             size = 60,
         })
 
+        -- Open Terminals
+        vim.keymap.set("n", "<leader>t1", ":1ToggleTerm<CR>", {})
+        vim.keymap.set("n", "<leader>t2", ":2ToggleTerm<CR>", {})
+        vim.keymap.set("n", "<leader>t3", ":3ToggleTerm<CR>", {})
+
         -- Send the current line to the terminal under the cursor
         vim.keymap.set("n", "<leader>ts", ":ToggleTermSendCurrentLine<CR>", {})
         -- Send the current lines under visual selection
-        vim.keymap.set("v", "<leader>tsl", ":ToggleTermSendVisualLines<CR>", {})
+        vim.keymap.set("v", "<leader>ts", ":ToggleTermSendVisualLines<CR>", {})
         -- Send just the characters highlighted
         vim.keymap.set("v", "<leader>tsv", ":ToggleTermSendVisualSelection<CR>", {})
 
