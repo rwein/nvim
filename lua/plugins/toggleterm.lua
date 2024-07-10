@@ -25,6 +25,18 @@ return {
         vim.keymap.set("n", "<leader>t2", ":2ToggleTerm<CR>", {})
         vim.keymap.set("n", "<leader>t3", ":3ToggleTerm<CR>", {})
 
+        -- Rerun the last command
+        vim.keymap.set("n", "<leader>tr", function()
+            -- Get the first active terminal
+            local terminal = require("toggleterm.terminal").get(1)
+
+            if terminal then
+                terminal:send("!!")
+            else
+                print("No active terminal found")
+            end
+        end, {})
+
         -- Send the current line to the terminal under the cursor
         vim.keymap.set("n", "<leader>ts", ":ToggleTermSendCurrentLine<CR>", {})
         -- Send the current lines under visual selection
