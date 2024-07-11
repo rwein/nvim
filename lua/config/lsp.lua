@@ -15,6 +15,9 @@ end)
 -- lspconfig.phpactor.setup({})
 lspconfig.intelephense.setup({}) -- Closed source and some features pay walled but works well for php
 lspconfig.lua_ls.setup({})
+lspconfig.gopls.setup({})
+-- For more LSP configs, see this resource
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 cmp.setup({
     -- Preselect first autocompletion

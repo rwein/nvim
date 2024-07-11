@@ -18,6 +18,7 @@ return {
                 json = { "prettier" },
                 -- Use a sub-list to run only the first available formatter
                 php = { { "pint", "php-cs-fixer" } },
+                go = { "gofmt" },
             },
         })
     end,
