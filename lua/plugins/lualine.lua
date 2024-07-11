@@ -7,8 +7,8 @@ return {
         require("lualine").setup({
             options = {
                 disabled_filetypes = {
-                    -- Don't show on nvim-tree
-                    "NvimTree",
+                    -- Don't show on file explorer
+                    "NeoTree",
                 },
             },
         })
