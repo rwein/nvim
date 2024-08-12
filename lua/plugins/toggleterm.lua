@@ -16,8 +16,8 @@ return {
     config = function()
         require("toggleterm").setup({
             open_mapping = "<C-t>",
-            direction = "vertical",
-            size = 60,
+            direction = "horizontal",
+            size = 20,
         })
 
         -- Open Terminals
