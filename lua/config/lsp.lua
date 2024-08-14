@@ -7,7 +7,7 @@ local lsp_zero = require("lsp-zero")
 lsp_zero.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
-    lsp_zero.default_keymaps({ buffer = bufnr })
+    lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
 end)
 
 -- PHPActor is an opensource LSP for PHP, but it didn't work as well as Intelephense for me (as of Jul 2024). Keeping
