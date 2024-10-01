@@ -10,6 +10,25 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
+        -- Start Blade support
+        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+        parser_config.blade = {
+            install_info = {
+                url = "https://github.com/EmranMR/tree-sitter-blade",
+                files = { "src/parser.c" },
+                branch = "main",
+            },
+            filetype = "blade",
+        }
+
+        vim.filetype.add({
+            pattern = {
+                [".*%.blade%.php"] = "blade",
+            },
+        })
+        -- End Blade support
+
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all" (the listed parsers MUST always be installed)
             ensure_installed = {
@@ -22,7 +41,9 @@ return {
                 "html",
                 "css",
                 "php",
+                "php_only",
                 "phpdoc",
+                "blade",
                 "javascript",
                 "typescript",
                 "tsx",
@@ -35,6 +56,9 @@ return {
                 "xml",
                 "yaml",
                 "dockerfile",
+            },
+            highlight = {
+                enable = true,
             },
         })
     end,
