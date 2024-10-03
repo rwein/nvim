@@ -10,9 +10,12 @@ return {
     init = function()
         vim.g.barbar_auto_setup = false
         vim.keymap.set("n", "<leader>bc", "<Cmd>BufferClose<CR>", {})
+        vim.keymap.set("n", "<leader>bca", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", {})
         vim.keymap.set("n", "<leader>bp", "<Cmd>BufferPick<CR>", {})
         vim.keymap.set("n", "<leader>bh", "<Cmd>BufferPrev<CR>", {})
         vim.keymap.set("n", "<leader>bl", "<Cmd>BufferNext<CR>", {})
+        vim.keymap.set("n", "<leader>bH", "<Cmd>BufferMovePrevious<CR>", {})
+        vim.keymap.set("n", "<leader>bL", "<Cmd>BufferMoveNext<CR>", {})
         vim.keymap.set("n", "<leader>b1", "<Cmd>BufferGoto 1<CR>", {})
         vim.keymap.set("n", "<leader>b2", "<Cmd>BufferGoto 2<CR>", {})
         vim.keymap.set("n", "<leader>b3", "<Cmd>BufferGoto 3<CR>", {})
