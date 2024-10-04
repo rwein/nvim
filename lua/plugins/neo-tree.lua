@@ -1,11 +1,9 @@
--- If no file has been selected, open up Neotree on startup
 local function open_neotree_on_boot()
     -- Only open nvim-tree if no files were specified on command line
     if vim.fn.argc() == 0 then
-        require("neo-tree").setup()
-        vim.api.nvim_command("Neotree")
-        -- https://github.com/romgrk/barbar.nvim/issues/421#issuecomment-1502473406
-        vim.api.nvim_exec_autocmds("BufWinEnter", { buffer = vim.fn.bufnr("#") })
+        vim.defer_fn(function()
+            vim.api.nvim_command("Neotree toggle")
+        end, 100)
     end
 end
 
@@ -18,10 +16,52 @@ return {
     keys = {
         { "<C-e>", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
     },
+    lazy = false,
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
         "MunifTanjim/nui.nvim",
         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
+    config = function()
+        require("neo-tree").setup({
+            -- Your NeoTree configuration options go here
+            -- window = {
+            --     position = "right",
+            -- },
+            filesystem = {
+                follow_current_file = {
+                    enabled = true,
+                },
+                use_libuv_file_watcher = true,
+            },
+            source_selector = {
+                winbar = true,
+                sources = {
+                    {
+                        source = "filesystem",
+                        display_name = " 󰉓 Files ",
+                    },
+                    {
+                        source = "buffers",
+                        display_name = " 󰈚 Buffers ",
+                    },
+                    {
+                        source = "git_status",
+                        display_name = " 󰊢 Git ",
+                    },
+                    {
+                        source = "document_symbols",
+                        display_name = " ⧉ Symbols ",
+                    },
+                },
+            },
+            sources = {
+                "filesystem",
+                "buffers",
+                "git_status",
+                "document_symbols",
+            },
+        })
+    end,
 }
